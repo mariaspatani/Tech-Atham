@@ -10,7 +10,8 @@
       margin: 0;
       padding: 0;
     }
-    body, html {
+    body,
+    html {
       width: 100%;
       height: 100%;
       min-height: 100vh;
@@ -23,7 +24,6 @@
       align-items: center;
     }
     :root {
-      /* Palette */
       --gold-light: #fff3a1;
       --gold: #fbbf24;
       --gold-rich: #d97706;
@@ -35,13 +35,12 @@
       --skin: #d97736;
       --skin-shadow: #a84e15;
       --skin-dark: #7c2d12;
-      
       --kasavu-gold: #FFD54A;
       --kerala-green: #0B5D3B;
       --temple-maroon: #7A1E2C;
       --ivory-cream: #FFF8E8;
       --lotus-pink: #EC4899;
-      --sunset-orange: #F59E0B;      
+      --sunset-orange: #F59E0B;
       --marigold-orange: #ea580c;
       --marigold-yellow: #facc15;
       --flower-white: #ffffff;
@@ -72,28 +71,32 @@
       background: linear-gradient(180deg, #15803d, #064e3b);
       z-index: 40;
       opacity: 0.95;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
     }
     .banana-leaf-decor.top-left {
-      top: -10px; left: -10px;
+      top: -10px;
+      left: -10px;
       border-radius: 0 0 100% 0;
       transform-origin: top left;
       transform: rotate(-5deg);
     }
     .banana-leaf-decor.top-right {
-      top: -10px; right: -10px;
+      top: -10px;
+      right: -10px;
       border-radius: 0 0 0 100%;
       transform-origin: top right;
       transform: rotate(5deg);
     }
     .banana-leaf-decor.bottom-left {
-      bottom: -10px; left: -10px;
+      bottom: -10px;
+      left: -10px;
       border-radius: 0 100% 0 0;
       transform-origin: bottom left;
       transform: rotate(5deg);
     }
     .banana-leaf-decor.bottom-right {
-      bottom: -10px; right: -10px;
+      bottom: -10px;
+      right: -10px;
       border-radius: 100% 0 0 0;
       transform-origin: bottom right;
       transform: rotate(-5deg);
@@ -101,7 +104,7 @@
     .banana-veins {
       width: 100%;
       height: 100%;
-      background: repeating-linear-gradient(45deg, transparent, transparent 15px, rgba(255,255,255,0.08) 15px, rgba(255,255,255,0.08) 17px);
+      background: repeating-linear-gradient(45deg, transparent, transparent 15px, rgba(255, 255, 255, 0.08) 15px, rgba(255, 255, 255, 0.08) 17px);
     }
     .bokeh-container {
       position: absolute;
@@ -116,9 +119,27 @@
       background: radial-gradient(circle, rgba(251, 191, 36, 0.15) 0%, transparent 60%);
       animation: float-bokeh 12s ease-in-out infinite alternate;
     }
-    .b1 { width: 150px; height: 150px; left: 10%; top: 20%; animation-duration: 10s; }
-    .b2 { width: 250px; height: 250px; right: 20%; top: 40%; animation-duration: 14s; }
-    .b3 { width: 180px; height: 180px; left: 30%; bottom: 30%; animation-duration: 16s; }
+    .b1 {
+      width: 150px;
+      height: 150px;
+      left: 10%;
+      top: 20%;
+      animation-duration: 10s;
+    }
+    .b2 {
+      width: 250px;
+      height: 250px;
+      right: 20%;
+      top: 40%;
+      animation-duration: 14s;
+    }
+    .b3 {
+      width: 180px;
+      height: 180px;
+      left: 30%;
+      bottom: 30%;
+      animation-duration: 16s;
+    }
     .garlands-top-container {
       position: absolute;
       top: 12px;
@@ -141,19 +162,23 @@
       animation: garland-swing 4s ease-in-out infinite alternate;
       transform-origin: top center;
     }
-    .hanging-garland.short { height: 90px; }
-    .hanging-garland.medium { height: 130px; }
-    .hanging-garland.long { height: 160px; }
-    
+    .hanging-garland.short {
+      height: 90px;
+    }
+    .hanging-garland.medium {
+      height: 130px;
+    }
+    .hanging-garland.long {
+      height: 160px;
+    }
     .garland-beads {
       width: 8px;
-      background: repeating-linear-gradient(180deg, 
-        #ea580c 0px, #ea580c 10px, 
-        #facc15 10px, #facc15 20px
-      );
+      background: repeating-linear-gradient(180deg,
+          #ea580c 0px, #ea580c 10px,
+          #facc15 10px, #facc15 20px);
       border-radius: 4px;
       flex-grow: 1;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     }
     .garland-flower-end {
       width: 20px;
@@ -170,7 +195,7 @@
       background: linear-gradient(to bottom, var(--gold-light), var(--gold-rich));
       clip-path: polygon(30% 0%, 70% 0%, 100% 80%, 50% 100%, 0% 80%);
       margin-top: 2px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
     }
     .left-section {
       width: 40%;
@@ -186,7 +211,7 @@
       border: 2.5px solid var(--gold);
       border-radius: 16px;
       padding: 40px;
-      box-shadow: 0 12px 35px rgba(0,0,0,0.6), inset 0 0 20px rgba(251, 191, 36, 0.2);
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6), inset 0 0 20px rgba(251, 191, 36, 0.2);
       backdrop-filter: blur(8px);
       position: relative;
       animation: glowing-border 3s ease-in-out infinite alternate;
@@ -200,17 +225,26 @@
       border: 2px solid var(--gold-light);
       box-shadow: 0 0 8px var(--gold);
     }
-    .corner-ornament.tl { top: -10px; left: -10px; }
-    .corner-ornament.tr { top: -10px; right: -10px; }
-    .corner-ornament.bl { bottom: -10px; left: -10px; }
-    .corner-ornament.br { bottom: -10px; right: -10px; }
-
+    .corner-ornament.tl {
+      top: -10px;
+      left: -10px;
+    }
+    .corner-ornament.tr {
+      top: -10px;
+      right: -10px;
+    }
+    .corner-ornament.bl {
+      bottom: -10px;
+      left: -10px;
+    }
+    .corner-ornament.br {
+      bottom: -10px;
+      right: -10px;
+    }
     .fade-in-text {
       animation: text-fade-in 1.5s ease-out forwards;
       opacity: 0;
     }
-
-    /* Temple-style Dividers */
     .temple-divider {
       width: 100%;
       height: 10px;
@@ -229,19 +263,17 @@
       color: var(--gold);
       font-size: 14px;
     }
-
     .greeting-title {
       font-size: clamp(20px, 3vh, 32px);
       font-weight: 900;
       color: #fff;
-      text-shadow: 0 2px 6px rgba(0,0,0,0.5);
+      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
       margin-bottom: 8px;
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 8px;
     }
-
     .greeting-subheading {
       font-size: clamp(16px, 2.2vh, 22px);
       font-weight: bold;
@@ -250,7 +282,6 @@
       margin-bottom: 12px;
       text-align: center;
     }
-
     .greeting-paragraph {
       font-size: clamp(12px, 1.8vh, 15px);
       line-height: 1.8;
@@ -258,8 +289,6 @@
       text-align: center;
       animation: text-glow-pulse 4s ease-in-out infinite alternate;
     }
-
-    /* Right Maveli Section */
     .right-section {
       width: 60%;
       height: 100%;
@@ -269,8 +298,6 @@
       position: relative;
       z-index: 10;
     }
-
-    /* Soft Golden Light Aura Behind Maveli */
     .soft-golden-aura {
       position: absolute;
       top: 50%;
@@ -279,18 +306,12 @@
       width: 450px;
       height: 450px;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(255,213,74,0.3) 0%, rgba(245,158,11,0.1) 50%, transparent 70%);
+      background: radial-gradient(circle, rgba(255, 213, 74, 0.3) 0%, rgba(245, 158, 11, 0.1) 50%, transparent 70%);
       filter: blur(10px);
       z-index: 0;
       pointer-events: none;
       animation: aura-glow 6s ease-in-out infinite alternate;
     }
-
-    /* ==========================================================================
-       3. AMBIENT ATMOSPHERE & DECORATIONS
-       ========================================================================== */
-
-    /* Falling Flower Petals Rain */
     .petal-rain {
       position: absolute;
       inset: 0;
@@ -311,13 +332,30 @@
     .petal:nth-child(2n) {
       background: radial-gradient(circle at 35% 35%, var(--gold), var(--sunset-orange) 70%);
     }
-    .p1 { left: 8%; animation-duration: 6.5s; }
-    .p2 { left: 24%; animation-duration: 8.5s; animation-delay: 1.5s; }
-    .p3 { left: 48%; animation-duration: 7.5s; animation-delay: 3.5s; }
-    .p4 { left: 68%; animation-duration: 9.5s; animation-delay: 2.5s; }
-    .p5 { left: 88%; animation-duration: 6.8s; animation-delay: 4.8s; }
-
-    /* Floating Sparkles and Fireflies */
+    .p1 {
+      left: 8%;
+      animation-duration: 6.5s;
+    }
+    .p2 {
+      left: 24%;
+      animation-duration: 8.5s;
+      animation-delay: 1.5s;
+    }
+    .p3 {
+      left: 48%;
+      animation-duration: 7.5s;
+      animation-delay: 3.5s;
+    }
+    .p4 {
+      left: 68%;
+      animation-duration: 9.5s;
+      animation-delay: 2.5s;
+    }
+    .p5 {
+      left: 88%;
+      animation-duration: 6.8s;
+      animation-delay: 4.8s;
+    }
     .particles-container {
       position: absolute;
       inset: 0;
@@ -333,14 +371,24 @@
       box-shadow: 0 0 10px var(--gold-light);
       animation: particle-rise 6s ease-in-out infinite;
     }
-    .pt1 { left: 15%; bottom: 10%; animation-delay: 0s; }
-    .pt2 { left: 45%; bottom: 15%; animation-delay: 2s; }
-    .pt3 { left: 75%; bottom: 8%; animation-delay: 4s; }
-
-    /* Temple Floor */
+    .pt1 {
+      left: 15%;
+      bottom: 10%;
+      animation-delay: 0s;
+    }
+    .pt2 {
+      left: 45%;
+      bottom: 15%;
+      animation-delay: 2s;
+    }
+    .pt3 {
+      left: 75%;
+      bottom: 8%;
+      animation-delay: 4s;
+    }
     .temple-floor {
       position: absolute;
-      bottom: 12%; 
+      bottom: 12%;
       left: 0;
       width: 100%;
       height: 80px;
@@ -352,10 +400,8 @@
     .floor-texture {
       width: 100%;
       height: 100%;
-      background: repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(0,0,0,0.2) 40px, rgba(0,0,0,0.2) 42px);
+      background: repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(0, 0, 0, 0.2) 40px, rgba(0, 0, 0, 0.2) 42px);
     }
-
-    /* Nilavilakku Lamps */
     .nilavilakku-lamp {
       position: absolute;
       bottom: 15px;
@@ -366,18 +412,21 @@
       flex-direction: column;
       align-items: center;
     }
-    .nilavilakku-lamp.left { left: 45px; }
-    .nilavilakku-lamp.right { right: 45px; }
+    .nilavilakku-lamp.left {
+      left: 45px;
+    }
+    .nilavilakku-lamp.right {
+      right: 45px;
+    }
     .lamp-shadow {
       position: absolute;
       bottom: -5px;
       width: 80px;
       height: 15px;
-      background: radial-gradient(ellipse, rgba(0,0,0,0.8) 0%, transparent 70%);
+      background: radial-gradient(ellipse, rgba(0, 0, 0, 0.8) 0%, transparent 70%);
       border-radius: 50%;
       z-index: -1;
     }
-
     .lamp-crown {
       width: 14px;
       height: 20px;
@@ -413,10 +462,6 @@
       border-radius: 0 0 6px 6px;
       border-bottom: 2px solid var(--gold-light);
     }
-
-    /* ==========================================================================
-       4. POOKALAM (Bottom Center) & VALLAM KALI
-       ========================================================================== */
     .pookalam-wrapper {
       position: absolute;
       bottom: -40px;
@@ -451,19 +496,42 @@
       margin-top: -100px;
       opacity: 0.9;
     }
-    .opetal.p1 { transform: rotate(0deg) translateY(-140px); }
-    .opetal.p2 { transform: rotate(30deg) translateY(-140px); }
-    .opetal.p3 { transform: rotate(60deg) translateY(-140px); }
-    .opetal.p4 { transform: rotate(90deg) translateY(-140px); }
-    .opetal.p5 { transform: rotate(120deg) translateY(-140px); }
-    .opetal.p6 { transform: rotate(150deg) translateY(-140px); }
-    .opetal.p7 { transform: rotate(180deg) translateY(-140px); }
-    .opetal.p8 { transform: rotate(210deg) translateY(-140px); }
-    .opetal.p9 { transform: rotate(240deg) translateY(-140px); }
-    .opetal.p10 { transform: rotate(270deg) translateY(-140px); }
-    .opetal.p11 { transform: rotate(300deg) translateY(-140px); }
-    .opetal.p12 { transform: rotate(330deg) translateY(-140px); }
-
+    .opetal.p1 {
+      transform: rotate(0deg) translateY(-140px);
+    }
+    .opetal.p2 {
+      transform: rotate(30deg) translateY(-140px);
+    }
+    .opetal.p3 {
+      transform: rotate(60deg) translateY(-140px);
+    }
+    .opetal.p4 {
+      transform: rotate(90deg) translateY(-140px);
+    }
+    .opetal.p5 {
+      transform: rotate(120deg) translateY(-140px);
+    }
+    .opetal.p6 {
+      transform: rotate(150deg) translateY(-140px);
+    }
+    .opetal.p7 {
+      transform: rotate(180deg) translateY(-140px);
+    }
+    .opetal.p8 {
+      transform: rotate(210deg) translateY(-140px);
+    }
+    .opetal.p9 {
+      transform: rotate(240deg) translateY(-140px);
+    }
+    .opetal.p10 {
+      transform: rotate(270deg) translateY(-140px);
+    }
+    .opetal.p11 {
+      transform: rotate(300deg) translateY(-140px);
+    }
+    .opetal.p12 {
+      transform: rotate(330deg) translateY(-140px);
+    }
     .pookkalam-disc {
       position: relative;
       width: 320px;
@@ -471,11 +539,10 @@
       border-radius: 50%;
       transform: rotateX(60deg);
       box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8), 0 0 40px rgba(251, 191, 36, 0.4);
-      background: repeating-conic-gradient(from 0deg, 
-        var(--sunset-orange) 0deg 8deg, 
-        var(--marigold-yellow) 8deg 16deg, 
-        var(--lotus-pink) 16deg 24deg
-      );
+      background: repeating-conic-gradient(from 0deg,
+          var(--sunset-orange) 0deg 8deg,
+          var(--marigold-yellow) 8deg 16deg,
+          var(--lotus-pink) 16deg 24deg);
       border: 8px solid var(--gold);
       animation: spin-pookkalam 45s linear infinite;
       z-index: 2;
@@ -487,8 +554,8 @@
       width: 260px;
       height: 260px;
       border-radius: 50%;
-      background: 
-        radial-gradient(circle, transparent 40%, rgba(0,0,0,0.3) 100%),
+      background:
+        radial-gradient(circle, transparent 40%, rgba(0, 0, 0, 0.3) 100%),
         repeating-conic-gradient(from 15deg, #ffffff 0deg 5deg, var(--gold-light) 5deg 10deg, var(--kerala-green) 10deg 20deg);
       border: 4px dashed var(--gold-rich);
       display: flex;
@@ -499,26 +566,23 @@
       width: 200px;
       height: 200px;
       border-radius: 50%;
-      background: repeating-radial-gradient(
-        circle at center, 
-        var(--lotus-pink) 0, 
-        var(--temple-maroon) 5px, 
-        var(--marigold-orange) 10px, 
-        var(--sunset-orange) 15px
-      );
+      background: repeating-radial-gradient(circle at center,
+          var(--lotus-pink) 0,
+          var(--temple-maroon) 5px,
+          var(--marigold-orange) 10px,
+          var(--sunset-orange) 15px);
       display: flex;
       justify-content: center;
       align-items: center;
-      box-shadow: inset 0 0 20px rgba(0,0,0,0.5);
+      box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
     }
     .pookkalam-ring-mid {
       width: 140px;
       height: 140px;
       border-radius: 50%;
-      background: repeating-conic-gradient(from 10deg, 
-        var(--kerala-green) 0deg 15deg, 
-        #064e3b 15deg 30deg
-      );
+      background: repeating-conic-gradient(from 10deg,
+          var(--kerala-green) 0deg 15deg,
+          #064e3b 15deg 30deg);
       border: 3px solid #fff;
       display: flex;
       justify-content: center;
@@ -539,11 +603,10 @@
     .pookkalam-inner-petals {
       width: 70px;
       height: 70px;
-      background: repeating-conic-gradient(from 0deg, 
-        var(--lotus-pink) 0deg 30deg, 
-        #fff 30deg 60deg,
-        var(--sunset-orange) 60deg 90deg
-      );
+      background: repeating-conic-gradient(from 0deg,
+          var(--lotus-pink) 0deg 30deg,
+          #fff 30deg 60deg,
+          var(--sunset-orange) 60deg 90deg);
       border-radius: 50%;
       opacity: 0.85;
     }
@@ -563,13 +626,42 @@
       opacity: 0.8;
       animation: float-around-pookalam 10s linear infinite;
     }
-    .fp1 { top: 20%; left: 10%; animation-duration: 12s; animation-delay: 0s; }
-    .fp2 { top: 70%; left: 80%; animation-duration: 14s; animation-delay: 2s; }
-    .fp3 { top: 10%; left: 70%; animation-duration: 10s; animation-delay: 4s; }
-    .fp4 { top: 80%; left: 15%; animation-duration: 15s; animation-delay: 6s; }
-    .fp5 { top: 40%; left: -10%; animation-duration: 11s; animation-delay: 1s; }
-    .fp6 { top: 50%; left: 100%; animation-duration: 13s; animation-delay: 3s; }
-
+    .fp1 {
+      top: 20%;
+      left: 10%;
+      animation-duration: 12s;
+      animation-delay: 0s;
+    }
+    .fp2 {
+      top: 70%;
+      left: 80%;
+      animation-duration: 14s;
+      animation-delay: 2s;
+    }
+    .fp3 {
+      top: 10%;
+      left: 70%;
+      animation-duration: 10s;
+      animation-delay: 4s;
+    }
+    .fp4 {
+      top: 80%;
+      left: 15%;
+      animation-duration: 15s;
+      animation-delay: 6s;
+    }
+    .fp5 {
+      top: 40%;
+      left: -10%;
+      animation-duration: 11s;
+      animation-delay: 1s;
+    }
+    .fp6 {
+      top: 50%;
+      left: 100%;
+      animation-duration: 13s;
+      animation-delay: 3s;
+    }
     .vallam-kali-scene {
       position: absolute;
       bottom: 0;
@@ -593,13 +685,11 @@
       bottom: 0;
       width: 200%;
       height: 100%;
-      background: repeating-radial-gradient(
-        ellipse at top,
-        transparent,
-        transparent 20px,
-        rgba(255, 255, 255, 0.05) 22px,
-        rgba(255, 255, 255, 0.05) 24px
-      );
+      background: repeating-radial-gradient(ellipse at top,
+          transparent,
+          transparent 20px,
+          rgba(255, 255, 255, 0.05) 22px,
+          rgba(255, 255, 255, 0.05) 24px);
       animation: river-flow 10s linear infinite;
     }
     .snake-boat-wrapper {
@@ -616,14 +706,17 @@
       right: 100%;
       width: 120px;
       height: 12px;
-      background: radial-gradient(ellipse at left, rgba(255,255,255,0.4) 0%, transparent 80%);
+      background: radial-gradient(ellipse at left, rgba(255, 255, 255, 0.4) 0%, transparent 80%);
       filter: blur(2px);
       transform: translateX(10px);
       z-index: -1;
     }
-    .boat-1 { animation-delay: 0s; }
-    .boat-2 { animation-delay: -8s; }
-
+    .boat-1 {
+      animation-delay: 0s;
+    }
+    .boat-2 {
+      animation-delay: -8s;
+    }
     .golden-aura-boat {
       position: absolute;
       bottom: -10px;
@@ -635,7 +728,6 @@
       filter: blur(12px);
       z-index: -1;
     }
-
     .boat-sparkle {
       position: absolute;
       width: 4px;
@@ -646,11 +738,31 @@
       animation: sparkle-float 2s ease-in-out infinite;
       z-index: 5;
     }
-    .bs1 { top: 10px; left: 20%; animation-delay: 0s; }
-    .bs2 { top: 5px; left: 50%; animation-delay: 0.5s; }
-    .bs3 { top: 15px; left: 80%; animation-delay: 1s; }
-    .bs4 { top: 25px; left: 10%; animation-delay: 1.5s; }
-    .bs5 { top: 20px; left: 90%; animation-delay: 0.8s; }
+    .bs1 {
+      top: 10px;
+      left: 20%;
+      animation-delay: 0s;
+    }
+    .bs2 {
+      top: 5px;
+      left: 50%;
+      animation-delay: 0.5s;
+    }
+    .bs3 {
+      top: 15px;
+      left: 80%;
+      animation-delay: 1s;
+    }
+    .bs4 {
+      top: 25px;
+      left: 10%;
+      animation-delay: 1.5s;
+    }
+    .bs5 {
+      top: 20px;
+      left: 90%;
+      animation-delay: 0.8s;
+    }
     .snake-boat {
       position: relative;
       width: 100%;
@@ -749,10 +861,6 @@
       background: #b45309;
       border-radius: 50% 50% 10% 10%;
     }
-
-    /* ==========================================================================
-       5. DETAILED MAVELI FIGURE (Right Side)
-       ========================================================================== */
     .maveli-figure {
       position: relative;
       width: 320px;
@@ -761,8 +869,6 @@
       animation: maveli-float-bob 4s ease-in-out infinite alternate;
       transform-origin: bottom center;
     }
-
-    /* Olakkuda (Traditional Palm-Leaf Umbrella) */
     .olakkuda {
       position: absolute;
       top: -30px;
@@ -790,7 +896,7 @@
       position: absolute;
       inset: 0;
       border-radius: 50%;
-      background: 
+      background:
         repeating-conic-gradient(from 0deg, rgba(254, 243, 199, 0.25) 0deg, rgba(254, 243, 199, 0.25) 3deg, transparent 3deg, transparent 15deg),
         repeating-radial-gradient(circle at center, transparent 0, transparent 12px, rgba(120, 53, 15, 0.6) 13px, rgba(254, 240, 138, 0.2) 15px);
     }
@@ -824,8 +930,6 @@
       transform-origin: top center;
       z-index: 1;
     }
-
-    /* Kireedam Crown */
     .kireedam-crown {
       position: absolute;
       top: 8px;
@@ -912,7 +1016,8 @@
       border-radius: 50%;
       border: 1.5px solid #fef08a;
     }
-    .crown-ear-wing-left, .crown-ear-wing-right {
+    .crown-ear-wing-left,
+    .crown-ear-wing-right {
       position: absolute;
       bottom: 2px;
       width: 26px;
@@ -922,10 +1027,14 @@
       border-radius: 50% 50% 10% 50%;
       z-index: 9;
     }
-    .crown-ear-wing-left { left: 0; transform: rotate(-25deg); }
-    .crown-ear-wing-right { right: 0; transform: scaleX(-1) rotate(-25deg); }
-
-    /* Face and Head */
+    .crown-ear-wing-left {
+      left: 0;
+      transform: rotate(-25deg);
+    }
+    .crown-ear-wing-right {
+      right: 0;
+      transform: scaleX(-1) rotate(-25deg);
+    }
     .maveli-head {
       position: absolute;
       top: 85px;
@@ -939,7 +1048,8 @@
       z-index: 8;
       border: 1px solid var(--skin-dark);
     }
-    .maveli-head::before, .maveli-head::after {
+    .maveli-head::before,
+    .maveli-head::after {
       content: "";
       position: absolute;
       top: 52px;
@@ -948,9 +1058,12 @@
       background: radial-gradient(circle, rgba(239, 68, 68, 0.35) 0%, transparent 80%);
       border-radius: 50%;
     }
-    .maveli-head::before { left: 10px; }
-    .maveli-head::after { right: 10px; }
-
+    .maveli-head::before {
+      left: 10px;
+    }
+    .maveli-head::after {
+      right: 10px;
+    }
     .chandan-tilak {
       position: absolute;
       top: 14px;
@@ -967,9 +1080,15 @@
       background: linear-gradient(90deg, transparent 0%, #fffbeb 20%, #fef08a 50%, #fffbeb 80%, transparent 100%);
       border-radius: 2px;
     }
-    .cs1 { width: 34px; }
-    .cs2 { width: 40px; }
-    .cs3 { width: 30px; }
+    .cs1 {
+      width: 34px;
+    }
+    .cs2 {
+      width: 40px;
+    }
+    .cs3 {
+      width: 30px;
+    }
     .kumkum-dot {
       width: 7px;
       height: 7px;
@@ -977,7 +1096,6 @@
       border-radius: 50%;
       margin-top: 1px;
     }
-
     .eyebrows-wrapper {
       position: absolute;
       top: 32px;
@@ -993,8 +1111,9 @@
       border-radius: 50% 50% 0 0;
       transform: rotate(6deg);
     }
-    .eyebrow.right { transform: rotate(-6deg); }
-
+    .eyebrow.right {
+      transform: rotate(-6deg);
+    }
     .eyes-wrapper {
       position: absolute;
       top: 40px;
@@ -1042,7 +1161,6 @@
       border-right: 2px solid rgba(168, 78, 21, 0.4);
       border-radius: 0 0 10px 10px;
     }
-
     .handlebar-mustache {
       position: absolute;
       top: 57px;
@@ -1052,7 +1170,8 @@
       height: 30px;
       z-index: 12;
     }
-    .mustache-left, .mustache-right {
+    .mustache-left,
+    .mustache-right {
       position: absolute;
       top: 0;
       width: 48px;
@@ -1069,7 +1188,8 @@
       border-radius: 100% 0 80% 20% / 100% 0 80% 20%;
       transform: rotate(8deg);
     }
-    .mustache-tip-left, .mustache-tip-right {
+    .mustache-tip-left,
+    .mustache-tip-right {
       position: absolute;
       top: -6px;
       width: 18px;
@@ -1079,9 +1199,14 @@
       border-left-color: transparent;
       border-radius: 50%;
     }
-    .mustache-tip-left { left: -8px; transform: rotate(-40deg); }
-    .mustache-tip-right { right: -8px; transform: scaleX(-1) rotate(-40deg); }
-
+    .mustache-tip-left {
+      left: -8px;
+      transform: rotate(-40deg);
+    }
+    .mustache-tip-right {
+      right: -8px;
+      transform: scaleX(-1) rotate(-40deg);
+    }
     .maveli-mouth {
       position: absolute;
       top: 73px;
@@ -1104,7 +1229,8 @@
       height: 5px;
       background: #ffffff;
     }
-    .maveli-ear-left, .maveli-ear-right {
+    .maveli-ear-left,
+    .maveli-ear-right {
       position: absolute;
       top: 40px;
       width: 18px;
@@ -1114,8 +1240,12 @@
       z-index: 6;
       border: 1.5px solid var(--skin-dark);
     }
-    .maveli-ear-left { left: -9px; }
-    .maveli-ear-right { right: -9px; }
+    .maveli-ear-left {
+      left: -9px;
+    }
+    .maveli-ear-right {
+      right: -9px;
+    }
     .kundalam-earring {
       position: absolute;
       bottom: -12px;
@@ -1134,8 +1264,6 @@
       border-radius: 50%;
       margin: 4px auto 0;
     }
-
-    /* Body, Potbelly and Accessories */
     .maveli-body {
       position: absolute;
       top: 165px;
@@ -1155,7 +1283,8 @@
       background: radial-gradient(circle at 50% 20%, var(--skin-highlight) 0%, var(--skin) 55%, var(--skin-shadow) 100%);
       border-radius: 20px 20px 40px 40px;
     }
-    .chest-chandan-left, .chest-chandan-right {
+    .chest-chandan-left,
+    .chest-chandan-right {
       position: absolute;
       top: 25px;
       width: 24px;
@@ -1163,9 +1292,12 @@
       background: linear-gradient(90deg, transparent, #fffbeb, #fef08a, transparent);
       border-radius: 3px;
     }
-    .chest-chandan-left { left: 16px; }
-    .chest-chandan-right { right: 16px; }
-
+    .chest-chandan-left {
+      left: 16px;
+    }
+    .chest-chandan-right {
+      right: 16px;
+    }
     .maveli-potbelly {
       position: absolute;
       top: 50px;
@@ -1273,8 +1405,6 @@
       background: linear-gradient(180deg, #f59e0b, #b45309 80%, #78350f);
       clip-path: polygon(0 0, 100% 0, 80% 100%, 20% 100%);
     }
-
-    /* Arms and Hands */
     .arm-left {
       position: absolute;
       top: 175px;
@@ -1406,8 +1536,6 @@
       background: linear-gradient(90deg, #78350f, #fbbf24, #fffbeb, #d97706, #78350f);
       border-radius: 4px;
     }
-
-    /* Shawl and Mundu */
     .royal-melmundu {
       position: absolute;
       top: 165px;
@@ -1461,6 +1589,26 @@
       background: linear-gradient(90deg, rgba(0, 0, 0, 0.08) 0%, transparent 30%, rgba(0, 0, 0, 0.12) 50%, transparent 70%, rgba(0, 0, 0, 0.08) 100%);
       border-left: 2px solid rgba(217, 119, 6, 0.5);
       border-right: 2px solid rgba(217, 119, 6, 0.5);
+    }
+    .kasavu-carpet {
+      position: absolute;
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 320px;
+      height: 60px;
+      background: repeating-linear-gradient(45deg, var(--kasavu-cream) 0, var(--kasavu-cream) 10px, #fef3c7 10px, #fef3c7 20px);
+      border: 4px solid var(--gold);
+      border-radius: 50% / 30%;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4), inset 0 0 10px var(--gold-rich);
+      z-index: 3;
+    }
+    .kasavu-carpet::after {
+      content: '';
+      position: absolute;
+      inset: 4px;
+      border: 2px dashed #f59e0b;
+      border-radius: 50% / 30%;
     }
     .maveli-feet-wrapper {
       position: absolute;
@@ -1523,107 +1671,223 @@
       border-radius: 4px;
       margin-top: 4px;
     }
-
-    /* ==========================================================================
-       10. ANIMATIONS KEYFRAMES
-       ========================================================================== */
     @keyframes maveli-float-bob {
-      0% { transform: translateY(0px) rotate(0deg); }
-      100% { transform: translateY(-12px) rotate(0.5deg); }
+      0% {
+        transform: translateY(0px) rotate(0deg);
+      }
+      100% {
+        transform: translateY(-12px) rotate(0.5deg);
+      }
     }
     @keyframes blessing-wave {
-      0% { transform: rotate(-5deg); }
-      100% { transform: rotate(7deg); }
+      0% {
+        transform: rotate(-5deg);
+      }
+      100% {
+        transform: rotate(7deg);
+      }
     }
     @keyframes umbrella-sway {
-      0% { transform: rotate(-10deg); }
-      100% { transform: rotate(-5deg); }
+      0% {
+        transform: rotate(-10deg);
+      }
+      100% {
+        transform: rotate(-5deg);
+      }
     }
     @keyframes spin-pookkalam {
-      from { transform: rotateX(60deg) rotate(0deg); }
-      to { transform: rotateX(60deg) rotate(360deg); }
+      from {
+        transform: rotateX(60deg) rotate(0deg);
+      }
+      to {
+        transform: rotateX(60deg) rotate(360deg);
+      }
     }
     @keyframes flame-flicker {
-      0% { transform: scale(0.9) rotate(-1deg); }
-      100% { transform: scale(1.1) rotate(1deg); }
+      0% {
+        transform: scale(0.9) rotate(-1deg);
+      }
+      100% {
+        transform: scale(1.1) rotate(1deg);
+      }
     }
     @keyframes garland-swing {
-      0% { transform: rotate(-2deg); }
-      100% { transform: rotate(2deg); }
+      0% {
+        transform: rotate(-2deg);
+      }
+      100% {
+        transform: rotate(2deg);
+      }
     }
     @keyframes tree-sway {
-      0% { transform: rotate(0deg) skewX(0deg); }
-      100% { transform: rotate(2.5deg) skewX(1deg); }
+      0% {
+        transform: rotate(0deg) skewX(0deg);
+      }
+      100% {
+        transform: rotate(2.5deg) skewX(1deg);
+      }
     }
     @keyframes particle-rise {
-      0% { transform: translateY(0) scale(0.8); opacity: 0; }
-      50% { opacity: 0.8; }
-      100% { transform: translateY(-80vh) scale(1.2); opacity: 0; }
+      0% {
+        transform: translateY(0) scale(0.8);
+        opacity: 0;
+      }
+      50% {
+        opacity: 0.8;
+      }
+      100% {
+        transform: translateY(-80vh) scale(1.2);
+        opacity: 0;
+      }
     }
     @keyframes petal-fall {
-      0% { top: -20px; transform: translateX(0) rotate(0deg); }
-      100% { top: 105%; transform: translateX(80px) rotate(360deg); }
+      0% {
+        top: -20px;
+        transform: translateX(0) rotate(0deg);
+      }
+      100% {
+        top: 105%;
+        transform: translateX(80px) rotate(360deg);
+      }
     }
     @keyframes aura-glow {
-      0% { opacity: 0.65; transform: translate(-50%, -50%) scale(0.95); }
-      100% { opacity: 0.85; transform: translate(-50%, -50%) scale(1.05); }
+      0% {
+        opacity: 0.65;
+        transform: translate(-50%, -50%) scale(0.95);
+      }
+      100% {
+        opacity: 0.85;
+        transform: translate(-50%, -50%) scale(1.05);
+      }
     }
     @keyframes text-glow-pulse {
-      0% { text-shadow: 0 0 4px rgba(255, 255, 255, 0.2); }
-      100% { text-shadow: 0 0 10px rgba(251, 191, 36, 0.4); }
+      0% {
+        text-shadow: 0 0 4px rgba(255, 255, 255, 0.2);
+      }
+      100% {
+        text-shadow: 0 0 10px rgba(251, 191, 36, 0.4);
+      }
     }
     @keyframes blink {
-      0%, 96%, 100% { transform: scaleY(1); }
-      98% { transform: scaleY(0.1); }
+      0%,
+      96%,
+      100% {
+        transform: scaleY(1);
+      }
+      98% {
+        transform: scaleY(0.1);
+      }
     }
     @keyframes boat-race {
-      0% { transform: translateX(-50vw); }
-      100% { transform: translateX(150vw); }
+      0% {
+        transform: translateX(-50vw);
+      }
+      100% {
+        transform: translateX(150vw);
+      }
     }
     @keyframes boat-bob {
-      0% { transform: translateY(0) rotate(-0.5deg); }
-      100% { transform: translateY(3px) rotate(0.5deg); }
+      0% {
+        transform: translateY(0) rotate(-0.5deg);
+      }
+      100% {
+        transform: translateY(3px) rotate(0.5deg);
+      }
     }
     @keyframes rowing-body {
-      0%, 100% { transform: rotate(-10deg); }
-      50% { transform: rotate(15deg); }
+      0%,
+      100% {
+        transform: rotate(-10deg);
+      }
+      50% {
+        transform: rotate(15deg);
+      }
     }
     @keyframes rowing-oar {
-      0%, 100% { transform: rotate(30deg); }
-      50% { transform: rotate(-45deg); }
+      0%,
+      100% {
+        transform: rotate(30deg);
+      }
+      50% {
+        transform: rotate(-45deg);
+      }
     }
     @keyframes river-flow {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
     }
     @keyframes sparkle-float {
-      0%, 100% { transform: translateY(0) scale(1); opacity: 0.8; }
-      50% { transform: translateY(-15px) scale(1.5); opacity: 1; }
+      0%,
+      100% {
+        transform: translateY(0) scale(1);
+        opacity: 0.8;
+      }
+      50% {
+        transform: translateY(-15px) scale(1.5);
+        opacity: 1;
+      }
     }
     @keyframes float-around-pookalam {
-      0% { transform: rotate(0deg) translateX(120px) rotate(0deg); opacity: 0.8; }
-      50% { transform: rotate(180deg) translateX(140px) rotate(180deg); opacity: 1; }
-      100% { transform: rotate(360deg) translateX(120px) rotate(360deg); opacity: 0.8; }
+      0% {
+        transform: rotate(0deg) translateX(120px) rotate(0deg);
+        opacity: 0.8;
+      }
+      50% {
+        transform: rotate(180deg) translateX(140px) rotate(180deg);
+        opacity: 1;
+      }
+      100% {
+        transform: rotate(360deg) translateX(120px) rotate(360deg);
+        opacity: 0.8;
+      }
     }
     @keyframes float-bokeh {
-      0% { transform: translate(0, 0) scale(1); opacity: 0.5; }
-      50% { transform: translate(30px, -50px) scale(1.2); opacity: 0.8; }
-      100% { transform: translate(-20px, -20px) scale(0.9); opacity: 0.5; }
+      0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.5;
+      }
+      50% {
+        transform: translate(30px, -50px) scale(1.2);
+        opacity: 0.8;
+      }
+      100% {
+        transform: translate(-20px, -20px) scale(0.9);
+        opacity: 0.5;
+      }
     }
     @keyframes glowing-border {
-      0% { border-color: var(--gold-dark); box-shadow: 0 12px 35px rgba(0,0,0,0.6), inset 0 0 10px rgba(251, 191, 36, 0.1); }
-      100% { border-color: var(--gold-light); box-shadow: 0 12px 35px rgba(0,0,0,0.6), inset 0 0 30px rgba(251, 191, 36, 0.5), 0 0 15px rgba(251, 191, 36, 0.4); }
+      0% {
+        border-color: var(--gold-dark);
+        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6), inset 0 0 10px rgba(251, 191, 36, 0.1);
+      }
+      100% {
+        border-color: var(--gold-light);
+        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6), inset 0 0 30px rgba(251, 191, 36, 0.5), 0 0 15px rgba(251, 191, 36, 0.4);
+      }
     }
     @keyframes text-fade-in {
-      0% { opacity: 0; transform: translateY(10px); }
-      100% { opacity: 1; transform: translateY(0); }
+      0% {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
     @keyframes jewel-sparkle {
-      0%, 100% { box-shadow: 0 0 0 transparent; }
-      50% { box-shadow: 0 0 10px 4px rgba(255, 255, 255, 0.8); }
+      0%,
+      100% {
+        box-shadow: 0 0 0 transparent;
+      }
+      50% {
+        box-shadow: 0 0 10px 4px rgba(255, 255, 255, 0.8);
+      }
     }
-
-    /* Responsive adjustments */
     @media (max-width: 768px) {
       .page-wrapper {
         flex-direction: column;
@@ -1663,16 +1927,19 @@
   </style>
 </head>
 <body>
-
   <div class="page-wrapper">
-    
-    <!-- Corner Decorative Banana Leaves -->
-    <div class="banana-leaf-decor top-left"><div class="banana-veins"></div></div>
-    <div class="banana-leaf-decor top-right"><div class="banana-veins"></div></div>
-    <div class="banana-leaf-decor bottom-left"><div class="banana-veins"></div></div>
-    <div class="banana-leaf-decor bottom-right"><div class="banana-veins"></div></div>
-
-    <!-- Hanging Marigold Garlands with Pink Flowers & Bells in both top corners -->
+    <div class="banana-leaf-decor top-left">
+      <div class="banana-veins"></div>
+    </div>
+    <div class="banana-leaf-decor top-right">
+      <div class="banana-veins"></div>
+    </div>
+    <div class="banana-leaf-decor bottom-left">
+      <div class="banana-veins"></div>
+    </div>
+    <div class="banana-leaf-decor bottom-right">
+      <div class="banana-veins"></div>
+    </div>
     <div class="garlands-top-container">
       <div class="garlands-group left-garlands">
         <div class="hanging-garland short">
@@ -1691,7 +1958,6 @@
           <div class="garland-bell-end"></div>
         </div>
       </div>
-
       <div class="garlands-group right-garlands">
         <div class="hanging-garland medium">
           <div class="garland-beads"></div>
@@ -1710,8 +1976,6 @@
         </div>
       </div>
     </div>
-
-    <!-- Falling Petals Rain -->
     <div class="petal-rain">
       <div class="petal p1"></div>
       <div class="petal p2"></div>
@@ -1719,8 +1983,6 @@
       <div class="petal p4"></div>
       <div class="petal p5"></div>
     </div>
-
-    <!-- Floating Sparkles & Soft Bokeh -->
     <div class="bokeh-container">
       <div class="bokeh b1"></div>
       <div class="bokeh b2"></div>
@@ -1733,39 +1995,30 @@
       <div class="particle pt4"></div>
       <div class="particle pt5"></div>
     </div>
-
-    <!-- Left Section: Malayalam Greetings -->
     <main class="left-section">
       <article class="greeting-box">
         <div class="corner-ornament tl"></div>
         <div class="corner-ornament tr"></div>
         <div class="corner-ornament bl"></div>
         <div class="corner-ornament br"></div>
-        
         <div class="fade-in-text">
           <h1 class="greeting-title">🌸 മാവേലി നാടുവാണീടും കാലം 🌸</h1>
           <div class="temple-divider"></div>
           <h2 class="greeting-subheading">ഹൃദയം നിറഞ്ഞ ഓണാശംസകൾ</h2>
           <p class="greeting-paragraph">
-            സ്നേഹത്തിന്റെയും സമത്വത്തിന്റെയും സമൃദ്ധിയുടെയും ഈ പൊന്നോണത്തിൽ എല്ലാവർക്കും സന്തോഷവും സമാധാനവും നിറഞ്ഞ ഓണാശംസകൾ. ഓണം കേരളത്തിന്റെ ഹൃദയമാണ്.
+            സ്നേഹത്തിന്റെയും സമത്വത്തിന്റെയും സമൃദ്ധിയുടെയും ഈ പൊന്നോണത്തിൽ എല്ലാവർക്കും സന്തോഷവും സമാധാനവും നിറഞ്ഞ
+            ഓണാശംസകൾ. ഓണം കേരളത്തിന്റെ ഹൃദയമാണ്.
           </p>
           <div class="temple-divider"></div>
         </div>
       </article>
     </main>
-
-    <!-- Right Section: Large Premium Cartoon Maveli -->
     <section class="right-section">
       <div class="soft-golden-aura"></div>
-      
-      <!-- Detailed Cartoon Maveli Artwork -->
       <article class="maveli-figure" title="King Mahabali (Maveli) — King of Kerala">
-        <!-- Royal Aura -->
         <div class="maveli-aura">
           <div class="aura-rays"></div>
         </div>
-
-        <!-- Olakkuda (Palm-Leaf Umbrella) -->
         <div class="olakkuda">
           <div class="olakkuda-canopy">
             <div class="olakkuda-ribs"></div>
@@ -1774,8 +2027,6 @@
           </div>
           <div class="olakkuda-handle"></div>
         </div>
-
-        <!-- Kireedam (Crown) -->
         <div class="kireedam-crown">
           <div class="crown-finial">
             <div class="crown-gem-top"></div>
@@ -1792,24 +2043,17 @@
           <div class="crown-ear-wing-left"></div>
           <div class="crown-ear-wing-right"></div>
         </div>
-
-        <!-- Maveli Head & Expressive Facial Features -->
         <div class="maveli-head">
-          <!-- Sandalwood Chandanakuri & Kumkum -->
           <div class="chandan-tilak">
             <div class="chandan-stripe cs1"></div>
             <div class="chandan-stripe cs2"></div>
             <div class="chandan-stripe cs3"></div>
             <div class="kumkum-dot"></div>
           </div>
-
-          <!-- Eyebrows -->
           <div class="eyebrows-wrapper">
             <div class="eyebrow left"></div>
             <div class="eyebrow right"></div>
           </div>
-
-          <!-- Kohl Eyeliner Eyes -->
           <div class="eyes-wrapper">
             <div class="eye">
               <div class="eyeball">
@@ -1822,24 +2066,16 @@
               </div>
             </div>
           </div>
-
-          <!-- Royal Nose -->
           <div class="maveli-nose"></div>
-
-          <!-- Handlebar Mustache (മീശ) -->
           <div class="handlebar-mustache">
             <div class="mustache-left"></div>
             <div class="mustache-right"></div>
             <div class="mustache-tip-left"></div>
             <div class="mustache-tip-right"></div>
           </div>
-
-          <!-- Benevolent Smile -->
           <div class="maveli-mouth">
             <div class="maveli-teeth"></div>
           </div>
-
-          <!-- Ears & Kundalam Ornaments -->
           <div class="maveli-ear-left">
             <div class="kundalam-earring">
               <div class="kundalam-ruby"></div>
@@ -1851,8 +2087,6 @@
             </div>
           </div>
         </div>
-
-        <!-- Royal Torso, Necklaces & Potbelly -->
         <div class="maveli-body">
           <div class="maveli-chest">
             <div class="chest-chandan-left"></div>
@@ -1861,25 +2095,17 @@
           <div class="maveli-potbelly">
             <div class="potbelly-navel"></div>
           </div>
-
-          <!-- Sacred Thread (Poonool) -->
           <div class="poonool-thread"></div>
-
-          <!-- Golden Necklaces -->
           <div class="necklace-choker"></div>
           <div class="necklace-kasumala"></div>
           <div class="necklace-navaratna">
             <div class="pendant-gold"></div>
           </div>
-
-          <!-- Golden Belt (Udarabandham) -->
           <div class="udarabandham-belt">
             <div class="belt-buckle-gem"></div>
             <div class="belt-tassels"></div>
           </div>
         </div>
-
-        <!-- Left Arm Holding Olakkuda -->
         <div class="arm-left">
           <div class="shoulder-left"></div>
           <div class="forearm-left">
@@ -1888,8 +2114,6 @@
             <div class="hand-left-grip"></div>
           </div>
         </div>
-
-        <!-- Right Arm in Abhaya Mudra (Blessing Pose) -->
         <div class="arm-right">
           <div class="shoulder-right"></div>
           <div class="forearm-right">
@@ -1907,18 +2131,13 @@
             </div>
           </div>
         </div>
-
-        <!-- Royal Crimson Melmundu Silk -->
         <div class="royal-melmundu"></div>
-
-        <!-- Kasavu Mundu (Dhoti with Gold Border) -->
         <div class="maveli-mundu-skirt">
           <div class="mundu-pleats-center"></div>
           <div class="kasavu-border-accent"></div>
           <div class="kasavu-gold-border-bottom"></div>
         </div>
-
-        <!-- Padukam Sandals & Lotus Pedestal -->
+        <div class="kasavu-carpet"></div>
         <div class="maveli-feet-wrapper">
           <div class="foot-padukam">
             <div class="anklet-kolusu"></div>
@@ -1929,7 +2148,6 @@
             <div class="padukam-knob"></div>
           </div>
         </div>
-
         <div class="lotus-pedestal">
           <div class="pedestal-petal"></div>
           <div class="pedestal-petal"></div>
@@ -1940,69 +2158,95 @@
           <div class="pedestal-petal"></div>
         </div>
       </article>
-
     </section>
-
-    <!-- Vallam Kali (Boat Race) Background -->
     <div class="vallam-kali-scene">
       <div class="river-water"></div>
-      
       <div class="snake-boat-wrapper boat-1">
         <div class="snake-boat">
           <div class="golden-aura-boat"></div>
-          <div class="boat-sparkle bs1"></div><div class="boat-sparkle bs2"></div>
-          <div class="boat-sparkle bs3"></div><div class="boat-sparkle bs4"></div>
+          <div class="boat-sparkle bs1"></div>
+          <div class="boat-sparkle bs2"></div>
+          <div class="boat-sparkle bs3"></div>
+          <div class="boat-sparkle bs4"></div>
           <div class="boat-sparkle bs5"></div>
           <div class="boat-prow"></div>
           <div class="boat-body">
             <div class="oarsmen-group">
-              <div class="oarsman"><div class="oar"></div></div>
-              <div class="oarsman"><div class="oar"></div></div>
-              <div class="oarsman"><div class="oar"></div></div>
-              <div class="oarsman"><div class="oar"></div></div>
-              <div class="oarsman"><div class="oar"></div></div>
-              <div class="oarsman"><div class="oar"></div></div>
-              <div class="oarsman"><div class="oar"></div></div>
-              <div class="oarsman"><div class="oar"></div></div>
+              <div class="oarsman">
+                <div class="oar"></div>
+              </div>
+              <div class="oarsman">
+                <div class="oar"></div>
+              </div>
+              <div class="oarsman">
+                <div class="oar"></div>
+              </div>
+              <div class="oarsman">
+                <div class="oar"></div>
+              </div>
+              <div class="oarsman">
+                <div class="oar"></div>
+              </div>
+              <div class="oarsman">
+                <div class="oar"></div>
+              </div>
+              <div class="oarsman">
+                <div class="oar"></div>
+              </div>
+              <div class="oarsman">
+                <div class="oar"></div>
+              </div>
             </div>
             <div class="boat-tail"></div>
             <div class="boat-wake"></div>
           </div>
         </div>
       </div>
-
       <div class="snake-boat-wrapper boat-2">
         <div class="snake-boat">
           <div class="golden-aura-boat"></div>
-          <div class="boat-sparkle bs1"></div><div class="boat-sparkle bs2"></div>
-          <div class="boat-sparkle bs3"></div><div class="boat-sparkle bs4"></div>
+          <div class="boat-sparkle bs1"></div>
+          <div class="boat-sparkle bs2"></div>
+          <div class="boat-sparkle bs3"></div>
+          <div class="boat-sparkle bs4"></div>
           <div class="boat-sparkle bs5"></div>
           <div class="boat-prow"></div>
           <div class="boat-body">
             <div class="oarsmen-group">
-              <div class="oarsman"><div class="oar"></div></div>
-              <div class="oarsman"><div class="oar"></div></div>
-              <div class="oarsman"><div class="oar"></div></div>
-              <div class="oarsman"><div class="oar"></div></div>
-              <div class="oarsman"><div class="oar"></div></div>
-              <div class="oarsman"><div class="oar"></div></div>
-              <div class="oarsman"><div class="oar"></div></div>
-              <div class="oarsman"><div class="oar"></div></div>
+              <div class="oarsman">
+                <div class="oar"></div>
+              </div>
+              <div class="oarsman">
+                <div class="oar"></div>
+              </div>
+              <div class="oarsman">
+                <div class="oar"></div>
+              </div>
+              <div class="oarsman">
+                <div class="oar"></div>
+              </div>
+              <div class="oarsman">
+                <div class="oar"></div>
+              </div>
+              <div class="oarsman">
+                <div class="oar"></div>
+              </div>
+              <div class="oarsman">
+                <div class="oar"></div>
+              </div>
+              <div class="oarsman">
+                <div class="oar"></div>
+              </div>
             </div>
             <div class="boat-tail"></div>
             <div class="boat-wake"></div>
           </div>
         </div>
       </div>
-
       <div class="river-waves"></div>
     </div>
-
-    <!-- Golden Temple Courtyard Ground -->
     <div class="temple-floor">
       <div class="floor-texture"></div>
-      
-      <!-- Nilavilakku Lamps on Ground -->
       <div class="nilavilakku-lamp left">
         <div class="lamp-crown"></div>
         <div class="lamp-flame"></div>
@@ -2011,7 +2255,6 @@
         <div class="lamp-base"></div>
         <div class="lamp-shadow"></div>
       </div>
-
       <div class="nilavilakku-lamp right">
         <div class="lamp-crown"></div>
         <div class="lamp-flame"></div>
@@ -2020,26 +2263,33 @@
         <div class="lamp-base"></div>
         <div class="lamp-shadow"></div>
       </div>
-
-      <!-- Bottom Center Pookalam -->
       <div class="pookalam-wrapper">
         <div class="pookalam-floating-petals">
-          <div class="fpetal fp1"></div><div class="fpetal fp2"></div>
-          <div class="fpetal fp3"></div><div class="fpetal fp4"></div>
-          <div class="fpetal fp5"></div><div class="fpetal fp6"></div>
+          <div class="fpetal fp1"></div>
+          <div class="fpetal fp2"></div>
+          <div class="fpetal fp3"></div>
+          <div class="fpetal fp4"></div>
+          <div class="fpetal fp5"></div>
+          <div class="fpetal fp6"></div>
         </div>
         <div class="pookalam-outer-petals">
-          <div class="opetal p1"></div><div class="opetal p2"></div>
-          <div class="opetal p3"></div><div class="opetal p4"></div>
-          <div class="opetal p5"></div><div class="opetal p6"></div>
-          <div class="opetal p7"></div><div class="opetal p8"></div>
-          <div class="opetal p9"></div><div class="opetal p10"></div>
-          <div class="opetal p11"></div><div class="opetal p12"></div>
+          <div class="opetal p1"></div>
+          <div class="opetal p2"></div>
+          <div class="opetal p3"></div>
+          <div class="opetal p4"></div>
+          <div class="opetal p5"></div>
+          <div class="opetal p6"></div>
+          <div class="opetal p7"></div>
+          <div class="opetal p8"></div>
+          <div class="opetal p9"></div>
+          <div class="opetal p10"></div>
+          <div class="opetal p11"></div>
+          <div class="opetal p12"></div>
         </div>
         <div class="pookkalam-disc">
           <div class="pookkalam-ring-2">
             <div class="pookkalam-ring-3">
-               <div class="pookkalam-ring-mid">
+              <div class="pookkalam-ring-mid">
                 <div class="pookkalam-center-lotus">
                   <div class="pookkalam-inner-petals"></div>
                 </div>
@@ -2049,8 +2299,6 @@
         </div>
       </div>
     </div>
-
   </div>
-
 </body>
 </html>
