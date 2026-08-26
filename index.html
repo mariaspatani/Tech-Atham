@@ -75,84 +75,63 @@
       box-shadow: 0 0 15px rgba(251, 191, 36, 0.25);
     }
 
-    /* Top Corner Decorative Banana Leaves */
+    /* Corner Decorative Banana Leaves */
     .banana-leaf-decor {
       position: absolute;
-      top: -10px;
-      width: 320px;
-      height: 180px;
-      background: linear-gradient(180deg, #15803d, #166534);
+      width: 250px;
+      height: 150px;
+      background: linear-gradient(180deg, #15803d, #064e3b);
       z-index: 40;
-      opacity: 0.9;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      opacity: 0.95;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.4);
     }
-    .banana-leaf-decor.left {
-      left: -10px;
+    .banana-leaf-decor.top-left {
+      top: -10px; left: -10px;
       border-radius: 0 0 100% 0;
       transform-origin: top left;
       transform: rotate(-5deg);
     }
-    .banana-leaf-decor.right {
-      right: -10px;
+    .banana-leaf-decor.top-right {
+      top: -10px; right: -10px;
       border-radius: 0 0 0 100%;
       transform-origin: top right;
       transform: rotate(5deg);
     }
+    .banana-leaf-decor.bottom-left {
+      bottom: -10px; left: -10px;
+      border-radius: 0 100% 0 0;
+      transform-origin: bottom left;
+      transform: rotate(5deg);
+    }
+    .banana-leaf-decor.bottom-right {
+      bottom: -10px; right: -10px;
+      border-radius: 100% 0 0 0;
+      transform-origin: bottom right;
+      transform: rotate(-5deg);
+    }
     .banana-veins {
       width: 100%;
       height: 100%;
-      background: repeating-linear-gradient(45deg, transparent, transparent 15px, rgba(255,255,255,0.06) 15px, rgba(255,255,255,0.06) 17px);
+      background: repeating-linear-gradient(45deg, transparent, transparent 15px, rgba(255,255,255,0.08) 15px, rgba(255,255,255,0.08) 17px);
     }
 
-    /* Swaying Coconut Trees Framing the page */
-    .coconut-tree-frame {
+    /* Soft Bokeh Lights */
+    .bokeh-container {
       position: absolute;
-      bottom: 80px;
-      width: 180px;
-      height: 380px;
-      z-index: 5;
-      opacity: 0.35;
+      inset: 0;
+      z-index: 2;
       pointer-events: none;
-      animation: tree-sway 6s ease-in-out infinite alternate;
+      overflow: hidden;
     }
-    .coconut-tree-frame.left {
-      left: -40px;
-      transform-origin: bottom left;
-    }
-    .coconut-tree-frame.right {
-      right: -40px;
-      transform-origin: bottom right;
-      transform: scaleX(-1);
-    }
-    .coconut-trunk {
+    .bokeh {
       position: absolute;
-      bottom: 0;
-      left: 60px;
-      width: 16px;
-      height: 340px;
-      background: linear-gradient(90deg, #1c1917, #0c0a09);
-      border-radius: 10px 10px 0 0;
-      transform: skewX(-5deg);
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(251, 191, 36, 0.15) 0%, transparent 60%);
+      animation: float-bokeh 12s ease-in-out infinite alternate;
     }
-    .coconut-fronds {
-      position: absolute;
-      top: 20px;
-      left: 10px;
-      width: 120px;
-      height: 100px;
-    }
-    .coconut-frond {
-      position: absolute;
-      width: 120px;
-      height: 40px;
-      border-top: 10px solid #047857;
-      border-radius: 50% 50% 0 0;
-      transform-origin: left bottom;
-    }
-    .cfr1 { transform: rotate(-50deg); }
-    .cfr2 { transform: rotate(-20deg); }
-    .cfr3 { transform: rotate(10deg); }
-    .cfr4 { transform: rotate(40deg); }
+    .b1 { width: 150px; height: 150px; left: 10%; top: 20%; animation-duration: 10s; }
+    .b2 { width: 250px; height: 250px; right: 20%; top: 40%; animation-duration: 14s; }
+    .b3 { width: 180px; height: 180px; left: 30%; bottom: 30%; animation-duration: 16s; }
 
     /* Hanging Marigold Garlands with Pink Flowers & Golden Bells (as in reference image) */
     .garlands-top-container {
@@ -232,6 +211,25 @@
       box-shadow: 0 12px 35px rgba(0,0,0,0.6), inset 0 0 20px rgba(251, 191, 36, 0.2);
       backdrop-filter: blur(8px);
       position: relative;
+      animation: glowing-border 3s ease-in-out infinite alternate;
+    }
+    .corner-ornament {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: var(--gold);
+      border-radius: 50%;
+      border: 2px solid var(--gold-light);
+      box-shadow: 0 0 8px var(--gold);
+    }
+    .corner-ornament.tl { top: -10px; left: -10px; }
+    .corner-ornament.tr { top: -10px; right: -10px; }
+    .corner-ornament.bl { bottom: -10px; left: -10px; }
+    .corner-ornament.br { bottom: -10px; right: -10px; }
+
+    .fade-in-text {
+      animation: text-fade-in 1.5s ease-out forwards;
+      opacity: 0;
     }
 
     /* Temple-style Dividers */
@@ -361,10 +359,28 @@
     .pt2 { left: 45%; bottom: 15%; animation-delay: 2s; }
     .pt3 { left: 75%; bottom: 8%; animation-delay: 4s; }
 
-    /* Nilavilakku Lamps (Bottom Corners) */
+    /* Temple Floor */
+    .temple-floor {
+      position: absolute;
+      bottom: 12%; 
+      left: 0;
+      width: 100%;
+      height: 80px;
+      background: linear-gradient(180deg, #b45309 0%, #78350f 100%);
+      border-top: 3px solid #fef08a;
+      box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.5);
+      z-index: 20;
+    }
+    .floor-texture {
+      width: 100%;
+      height: 100%;
+      background: repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(0,0,0,0.2) 40px, rgba(0,0,0,0.2) 42px);
+    }
+
+    /* Nilavilakku Lamps */
     .nilavilakku-lamp {
       position: absolute;
-      bottom: 25px;
+      bottom: 15px;
       width: 70px;
       height: 220px;
       z-index: 30;
@@ -374,6 +390,15 @@
     }
     .nilavilakku-lamp.left { left: 45px; }
     .nilavilakku-lamp.right { right: 45px; }
+    .lamp-shadow {
+      position: absolute;
+      bottom: -5px;
+      width: 80px;
+      height: 15px;
+      background: radial-gradient(ellipse, rgba(0,0,0,0.8) 0%, transparent 70%);
+      border-radius: 50%;
+      z-index: -1;
+    }
 
     .lamp-crown {
       width: 14px;
@@ -544,49 +569,35 @@
       border-radius: 50%;
       opacity: 0.85;
     }
-    .vilakku-center {
+    .pookalam-floating-petals {
       position: absolute;
-      bottom: 12px;
-      left: 50%;
-      transform: translateX(-50%) rotateX(-60deg);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      z-index: 10;
+      width: 500px;
+      height: 500px;
+      pointer-events: none;
+      z-index: 20;
     }
-    .vilakku-base {
-      width: 12px;
-      height: 25px;
-      background: linear-gradient(90deg, var(--gold-dark), var(--gold), var(--gold-dark));
-      border-radius: 2px;
-      position: relative;
-    }
-    .vilakku-base::before {
-      content: '';
+    .fpetal {
       position: absolute;
-      bottom: 0;
-      left: -8px;
-      width: 28px;
-      height: 6px;
-      background: var(--gold-rich);
-      border-radius: 50%;
+      width: 20px;
+      height: 35px;
+      background: radial-gradient(ellipse at bottom, var(--temple-maroon) 0%, var(--lotus-pink) 70%);
+      border-radius: 50% 50% 0 0;
+      opacity: 0.8;
+      animation: float-around-pookalam 10s linear infinite;
     }
-    .vilakku-flame {
-      width: 10px;
-      height: 16px;
-      background: radial-gradient(ellipse at bottom, #fff, var(--gold-light), #f97316, transparent);
-      border-radius: 50% 50% 20% 20% / 60% 60% 40% 40%;
-      margin-bottom: 2px;
-      animation: flame-flicker 0.2s infinite alternate;
-      box-shadow: 0 0 10px 4px rgba(251, 191, 36, 0.6);
-    }
+    .fp1 { top: 20%; left: 10%; animation-duration: 12s; animation-delay: 0s; }
+    .fp2 { top: 70%; left: 80%; animation-duration: 14s; animation-delay: 2s; }
+    .fp3 { top: 10%; left: 70%; animation-duration: 10s; animation-delay: 4s; }
+    .fp4 { top: 80%; left: 15%; animation-duration: 15s; animation-delay: 6s; }
+    .fp5 { top: 40%; left: -10%; animation-duration: 11s; animation-delay: 1s; }
+    .fp6 { top: 50%; left: 100%; animation-duration: 13s; animation-delay: 3s; }
 
     .vallam-kali-scene {
       position: absolute;
       bottom: 0;
       left: 0;
       width: 100%;
-      height: 180px;
+      height: 12%;
       z-index: 5;
       overflow: hidden;
     }
@@ -594,7 +605,7 @@
       position: absolute;
       bottom: 0;
       width: 100%;
-      height: 100px;
+      height: 100%;
       background: linear-gradient(180deg, rgba(8, 145, 178, 0.4) 0%, rgba(15, 23, 42, 0.8) 100%);
       border-top: 2px solid rgba(56, 189, 248, 0.3);
       backdrop-filter: blur(4px);
@@ -603,7 +614,7 @@
       position: absolute;
       bottom: 0;
       width: 200%;
-      height: 100px;
+      height: 100%;
       background: repeating-radial-gradient(
         ellipse at top,
         transparent,
@@ -615,11 +626,22 @@
     }
     .snake-boat-wrapper {
       position: absolute;
-      bottom: 40px;
+      bottom: 10px;
       left: -400px;
       width: 350px;
       height: 80px;
       animation: boat-race 16s linear infinite;
+    }
+    .boat-wake {
+      position: absolute;
+      bottom: -5px;
+      right: 100%;
+      width: 120px;
+      height: 12px;
+      background: radial-gradient(ellipse at left, rgba(255,255,255,0.4) 0%, transparent 80%);
+      filter: blur(2px);
+      transform: translateX(10px);
+      z-index: -1;
     }
     .boat-1 { animation-delay: 0s; }
     .boat-2 { animation-delay: -8s; }
@@ -901,6 +923,9 @@
       background: radial-gradient(circle at 35% 35%, #fca5a5, #dc2626 60%, #7f1d1d 100%);
       border-radius: 50%;
       border: 1px solid #fef08a;
+    }
+    .crown-jewel-sparkle {
+      animation: jewel-sparkle 3s ease-in-out infinite;
     }
     .crown-emerald {
       width: 14px;
@@ -1597,6 +1622,28 @@
       0%, 100% { transform: translateY(0) scale(1); opacity: 0.8; }
       50% { transform: translateY(-15px) scale(1.5); opacity: 1; }
     }
+    @keyframes float-around-pookalam {
+      0% { transform: rotate(0deg) translateX(120px) rotate(0deg); opacity: 0.8; }
+      50% { transform: rotate(180deg) translateX(140px) rotate(180deg); opacity: 1; }
+      100% { transform: rotate(360deg) translateX(120px) rotate(360deg); opacity: 0.8; }
+    }
+    @keyframes float-bokeh {
+      0% { transform: translate(0, 0) scale(1); opacity: 0.5; }
+      50% { transform: translate(30px, -50px) scale(1.2); opacity: 0.8; }
+      100% { transform: translate(-20px, -20px) scale(0.9); opacity: 0.5; }
+    }
+    @keyframes glowing-border {
+      0% { border-color: var(--gold-dark); box-shadow: 0 12px 35px rgba(0,0,0,0.6), inset 0 0 10px rgba(251, 191, 36, 0.1); }
+      100% { border-color: var(--gold-light); box-shadow: 0 12px 35px rgba(0,0,0,0.6), inset 0 0 30px rgba(251, 191, 36, 0.5), 0 0 15px rgba(251, 191, 36, 0.4); }
+    }
+    @keyframes text-fade-in {
+      0% { opacity: 0; transform: translateY(10px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes jewel-sparkle {
+      0%, 100% { box-shadow: 0 0 0 transparent; }
+      50% { box-shadow: 0 0 10px 4px rgba(255, 255, 255, 0.8); }
+    }
 
     /* Responsive adjustments */
     @media (max-width: 768px) {
@@ -1641,30 +1688,11 @@
 
   <div class="page-wrapper">
     
-    <!-- Top Corner Banana Leaves -->
-    <div class="banana-leaf-decor left"><div class="banana-veins"></div></div>
-    <div class="banana-leaf-decor right"><div class="banana-veins"></div></div>
-
-    <!-- Swaying Coconut Trees Framing the Page -->
-    <div class="coconut-tree-frame left">
-      <div class="coconut-trunk"></div>
-      <div class="coconut-fronds">
-        <div class="coconut-frond cfr1"></div>
-        <div class="coconut-frond cfr2"></div>
-        <div class="coconut-frond cfr3"></div>
-        <div class="coconut-frond cfr4"></div>
-      </div>
-    </div>
-
-    <div class="coconut-tree-frame right">
-      <div class="coconut-trunk"></div>
-      <div class="coconut-fronds">
-        <div class="coconut-frond cfr1"></div>
-        <div class="coconut-frond cfr2"></div>
-        <div class="coconut-frond cfr3"></div>
-        <div class="coconut-frond cfr4"></div>
-      </div>
-    </div>
+    <!-- Corner Decorative Banana Leaves -->
+    <div class="banana-leaf-decor top-left"><div class="banana-veins"></div></div>
+    <div class="banana-leaf-decor top-right"><div class="banana-veins"></div></div>
+    <div class="banana-leaf-decor bottom-left"><div class="banana-veins"></div></div>
+    <div class="banana-leaf-decor bottom-right"><div class="banana-veins"></div></div>
 
     <!-- Hanging Marigold Garlands with Pink Flowers & Bells in both top corners -->
     <div class="garlands-top-container">
@@ -1714,40 +1742,37 @@
       <div class="petal p5"></div>
     </div>
 
-    <!-- Floating Sparkles -->
+    <!-- Floating Sparkles & Soft Bokeh -->
+    <div class="bokeh-container">
+      <div class="bokeh b1"></div>
+      <div class="bokeh b2"></div>
+      <div class="bokeh b3"></div>
+    </div>
     <div class="particles-container">
       <div class="particle pt1"></div>
       <div class="particle pt2"></div>
       <div class="particle pt3"></div>
-    </div>
-
-    <!-- Nilavilakku Lamps (Bottom Corners) -->
-    <div class="nilavilakku-lamp left">
-      <div class="lamp-crown"></div>
-      <div class="lamp-flame"></div>
-      <div class="lamp-basin"></div>
-      <div class="lamp-stem"></div>
-      <div class="lamp-base"></div>
-    </div>
-
-    <div class="nilavilakku-lamp right">
-      <div class="lamp-crown"></div>
-      <div class="lamp-flame"></div>
-      <div class="lamp-basin"></div>
-      <div class="lamp-stem"></div>
-      <div class="lamp-base"></div>
+      <div class="particle pt4"></div>
+      <div class="particle pt5"></div>
     </div>
 
     <!-- Left Section: Malayalam Greetings -->
     <main class="left-section">
       <article class="greeting-box">
-        <h1 class="greeting-title">🌸 മാവേലി നാടുവാണീടും കാലം 🌸</h1>
-        <div class="temple-divider"></div>
-        <h2 class="greeting-subheading">ഹൃദയം നിറഞ്ഞ ഓണാശംസകൾ</h2>
-        <p class="greeting-paragraph">
-          സ്നേഹത്തിന്റെയും സമത്വത്തിന്റെയും സമൃദ്ധിയുടെയും ഈ പൊന്നോണത്തിൽ എല്ലാവർക്കും സന്തോഷവും സമാധാനവും നിറഞ്ഞ ഓണാശംസകൾ. ഓണം കേരളത്തിന്റെ ഹൃദയമാണ്.
-        </p>
-        <div class="temple-divider"></div>
+        <div class="corner-ornament tl"></div>
+        <div class="corner-ornament tr"></div>
+        <div class="corner-ornament bl"></div>
+        <div class="corner-ornament br"></div>
+        
+        <div class="fade-in-text">
+          <h1 class="greeting-title">🌸 മാവേലി നാടുവാണീടും കാലം 🌸</h1>
+          <div class="temple-divider"></div>
+          <h2 class="greeting-subheading">ഹൃദയം നിറഞ്ഞ ഓണാശംസകൾ</h2>
+          <p class="greeting-paragraph">
+            സ്നേഹത്തിന്റെയും സമത്വത്തിന്റെയും സമൃദ്ധിയുടെയും ഈ പൊന്നോണത്തിൽ എല്ലാവർക്കും സന്തോഷവും സമാധാനവും നിറഞ്ഞ ഓണാശംസകൾ. ഓണം കേരളത്തിന്റെ ഹൃദയമാണ്.
+          </p>
+          <div class="temple-divider"></div>
+        </div>
       </article>
     </main>
 
@@ -1780,11 +1805,11 @@
           <div class="crown-top-tier"></div>
           <div class="crown-mid-tier"></div>
           <div class="crown-base-band">
-            <div class="crown-ruby"></div>
+            <div class="crown-ruby crown-jewel-sparkle"></div>
             <div class="crown-emerald"></div>
             <div class="crown-ruby"></div>
             <div class="crown-emerald"></div>
-            <div class="crown-ruby"></div>
+            <div class="crown-ruby crown-jewel-sparkle" style="animation-delay: 1.5s;"></div>
           </div>
           <div class="crown-ear-wing-left"></div>
           <div class="crown-ear-wing-right"></div>
@@ -1963,6 +1988,7 @@
               <div class="oarsman"><div class="oar"></div></div>
             </div>
             <div class="boat-tail"></div>
+            <div class="boat-wake"></div>
           </div>
         </div>
       </div>
@@ -1986,6 +2012,7 @@
               <div class="oarsman"><div class="oar"></div></div>
             </div>
             <div class="boat-tail"></div>
+            <div class="boat-wake"></div>
           </div>
         </div>
       </div>
@@ -1993,25 +2020,50 @@
       <div class="river-waves"></div>
     </div>
 
-    <!-- Bottom Center Pookalam -->
-    <div class="pookalam-wrapper">
-      <div class="pookalam-outer-petals">
-        <div class="opetal p1"></div><div class="opetal p2"></div>
-        <div class="opetal p3"></div><div class="opetal p4"></div>
-        <div class="opetal p5"></div><div class="opetal p6"></div>
-        <div class="opetal p7"></div><div class="opetal p8"></div>
-        <div class="opetal p9"></div><div class="opetal p10"></div>
-        <div class="opetal p11"></div><div class="opetal p12"></div>
+    <!-- Golden Temple Courtyard Ground -->
+    <div class="temple-floor">
+      <div class="floor-texture"></div>
+      
+      <!-- Nilavilakku Lamps on Ground -->
+      <div class="nilavilakku-lamp left">
+        <div class="lamp-crown"></div>
+        <div class="lamp-flame"></div>
+        <div class="lamp-basin"></div>
+        <div class="lamp-stem"></div>
+        <div class="lamp-base"></div>
+        <div class="lamp-shadow"></div>
       </div>
-      <div class="pookkalam-disc">
-        <div class="pookkalam-ring-2">
-          <div class="pookkalam-ring-3">
-             <div class="pookkalam-ring-mid">
-              <div class="pookkalam-center-lotus">
-                <div class="pookkalam-inner-petals"></div>
-                <div class="vilakku-center">
-                  <div class="vilakku-flame"></div>
-                  <div class="vilakku-base"></div>
+
+      <div class="nilavilakku-lamp right">
+        <div class="lamp-crown"></div>
+        <div class="lamp-flame"></div>
+        <div class="lamp-basin"></div>
+        <div class="lamp-stem"></div>
+        <div class="lamp-base"></div>
+        <div class="lamp-shadow"></div>
+      </div>
+
+      <!-- Bottom Center Pookalam -->
+      <div class="pookalam-wrapper">
+        <div class="pookalam-floating-petals">
+          <div class="fpetal fp1"></div><div class="fpetal fp2"></div>
+          <div class="fpetal fp3"></div><div class="fpetal fp4"></div>
+          <div class="fpetal fp5"></div><div class="fpetal fp6"></div>
+        </div>
+        <div class="pookalam-outer-petals">
+          <div class="opetal p1"></div><div class="opetal p2"></div>
+          <div class="opetal p3"></div><div class="opetal p4"></div>
+          <div class="opetal p5"></div><div class="opetal p6"></div>
+          <div class="opetal p7"></div><div class="opetal p8"></div>
+          <div class="opetal p9"></div><div class="opetal p10"></div>
+          <div class="opetal p11"></div><div class="opetal p12"></div>
+        </div>
+        <div class="pookkalam-disc">
+          <div class="pookkalam-ring-2">
+            <div class="pookkalam-ring-3">
+               <div class="pookkalam-ring-mid">
+                <div class="pookkalam-center-lotus">
+                  <div class="pookkalam-inner-petals"></div>
                 </div>
               </div>
             </div>
