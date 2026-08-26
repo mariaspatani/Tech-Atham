@@ -5,9 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>മാവേലി കേരളത്തിലേക്ക് സ്വാഗതം — Onam 2026</title>
   <style>
-    /* ==========================================================================
-       1. GLOBAL RESET & VARIABLES
-       ========================================================================== */
     * {
       box-sizing: border-box;
       margin: 0;
@@ -25,7 +22,6 @@
       justify-content: center;
       align-items: center;
     }
-
     :root {
       /* Palette */
       --gold-light: #fff3a1;
@@ -45,15 +41,12 @@
       --temple-maroon: #7A1E2C;
       --ivory-cream: #FFF8E8;
       --lotus-pink: #EC4899;
-      --sunset-orange: #F59E0B;
-      
+      --sunset-orange: #F59E0B;      
       --marigold-orange: #ea580c;
       --marigold-yellow: #facc15;
       --flower-white: #ffffff;
       --ruby: #dc2626;
     }
-
-    /* Page Container with Traditional Golden Border */
     .page-wrapper {
       position: relative;
       width: 100vw;
@@ -63,8 +56,6 @@
       padding: 24px;
       overflow: hidden;
     }
-
-    /* Traditional Golden Border Frame around the entire page */
     .page-wrapper::before {
       content: '';
       position: absolute;
@@ -74,8 +65,6 @@
       z-index: 100;
       box-shadow: 0 0 15px rgba(251, 191, 36, 0.25);
     }
-
-    /* Corner Decorative Banana Leaves */
     .banana-leaf-decor {
       position: absolute;
       width: 250px;
@@ -114,8 +103,6 @@
       height: 100%;
       background: repeating-linear-gradient(45deg, transparent, transparent 15px, rgba(255,255,255,0.08) 15px, rgba(255,255,255,0.08) 17px);
     }
-
-    /* Soft Bokeh Lights */
     .bokeh-container {
       position: absolute;
       inset: 0;
@@ -132,8 +119,6 @@
     .b1 { width: 150px; height: 150px; left: 10%; top: 20%; animation-duration: 10s; }
     .b2 { width: 250px; height: 250px; right: 20%; top: 40%; animation-duration: 14s; }
     .b3 { width: 180px; height: 180px; left: 30%; bottom: 30%; animation-duration: 16s; }
-
-    /* Hanging Marigold Garlands with Pink Flowers & Golden Bells (as in reference image) */
     .garlands-top-container {
       position: absolute;
       top: 12px;
@@ -187,12 +172,6 @@
       margin-top: 2px;
       box-shadow: 0 2px 4px rgba(0,0,0,0.4);
     }
-
-    /* ==========================================================================
-       2. LAYOUT SECTIONS (Left 40% / Right 60%)
-       ========================================================================== */
-    
-    /* Left Greetings Section */
     .left-section {
       width: 40%;
       height: 100%;
@@ -202,7 +181,6 @@
       padding: 0 40px;
       z-index: 10;
     }
-
     .greeting-box {
       background: rgba(11, 93, 59, 0.45);
       border: 2.5px solid var(--gold);
